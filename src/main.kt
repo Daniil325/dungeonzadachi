@@ -1,18 +1,17 @@
 fun main()
 {
     var vector31 =  Vector3()
-    vector31.x = 3
-    vector31.y = 2
-    vector31.z = 4
+    vector31.x = readLine()!!.toInt()
+    vector31.y = readLine()!!.toInt()
+    vector31.z = readLine()!!.toInt()
     var vector32 =  Vector3()
-    vector32.x = 5
-    vector32.y = 1
-    vector32.z = 7
+    vector32.x = readLine()!!.toInt()
+    vector32.y = readLine()!!.toInt()
+    vector32.z = readLine()!!.toInt()
     var res = vector31.skalpr(vector32)
     println(res.x)
     println(res.y)
     println(res.z)
-
 }
 
 class Vector3()
