@@ -1,0 +1,32 @@
+import kotlin.random.Random
+
+val names = mutableListOf<String>("Valera", "Alexander")
+val oc = mutableListOf<Int>(Random.nextInt(100))
+
+fun main() {
+    var students = MutableList(2) { Student() }
+    var ocen = MutableList(2) { Student() }
+    var stColl = MutableList(names.size) {
+        Student().apply {
+            name = names[it]
+        }
+    }
+
+    var ocColl = MutableList(oc.size){
+        Student().apply {
+            o = oc[it]
+        }
+    }
+    stColl.forEach{
+        println(it.name)
+        ocColl.forEach{
+            println(it.o)
+        }
+    }
+
+}
+
+class Student{
+    var name: String = ""
+    var o: Int = 0
+}
